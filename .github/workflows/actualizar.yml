@@ -1,37 +1,33 @@
 name: Actualizar acumulados y resultados
-
 on:
   schedule:
-    # Todos los días a las 11:15 UTC (06:15 Colombia). GitHub puede retrasar horarios programados.
+    # 06:15 de Colombia (11:15 UTC); GitHub puede retrasar ejecuciones programadas.
     - cron: "15 11 * * *"
   workflow_dispatch:
-
 permissions:
   contents: write
-
 concurrency:
   group: actualizar-resultados
   cancel-in-progress: false
-
 jobs:
   actualizar:
     runs-on: ubuntu-latest
     steps:
       - name: Descargar repositorio
         uses: actions/checkout@v4
-      - name: Preparar Python
+      - name: Configurar Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Consultar las fuentes y validar datos
+      - name: Consultar y validar las fuentes oficiales
         run: python scripts/actualizar_resultados.py
-      - name: Guardar nuevos datos validados
+      - name: Guardar únicamente cambios validados
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/resultados.json
           if git diff --cached --quiet; then
-            echo "No hay cambios validados que guardar."
+            echo "No hubo cambios de datos para guardar."
           else
             git commit -m "Actualización diaria de acumulados y resultados"
             git push
