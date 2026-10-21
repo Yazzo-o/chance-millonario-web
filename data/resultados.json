@@ -1,0 +1,14 @@
+{
+  "fuentes": {
+    "supergiros_sucre": "https://supergirossucre.com.co/",
+    "chance_millonario": "https://www.chancemillonario.com/index.php"
+  },
+  "actualizado_en": "Pendiente de primera consulta automática",
+  "estado": "pendiente-validacion",
+  "acumulados": [],
+  "principal": {
+    "apuesta": "$6.000",
+    "valor": null
+  },
+  "resultados": []
+}
