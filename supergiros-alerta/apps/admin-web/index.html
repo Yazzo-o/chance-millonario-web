@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SuperGIROS Alerta — Panel de prueba</title>
+  <style>
+    :root{font-family:Inter,system-ui,-apple-system,sans-serif;color:#14233b;background:#f3f6fb}
+    body{margin:0}header{background:#075db8;color:white;padding:24px max(20px,calc((100vw - 960px)/2))}
+    main{max-width:960px;margin:28px auto;padding:0 20px}
+    .warning{background:#fff4d6;border:1px solid #e5c46a;padding:14px 16px;border-radius:12px}
+    .panel{background:white;border:1px solid #dfe6ef;border-radius:16px;padding:22px;margin-top:18px}
+    label{display:block;font-weight:650;margin:16px 0 6px}
+    input,textarea{box-sizing:border-box;width:100%;border:1px solid #c8d3e0;border-radius:9px;padding:12px;font:inherit}
+    textarea{min-height:90px;resize:vertical}
+    button{background:#075db8;color:white;border:0;padding:12px 18px;border-radius:9px;font:inherit;font-weight:700;cursor:pointer;margin-top:16px}
+    .muted{color:#5c6c80}.status{white-space:pre-wrap;overflow-wrap:anywhere;background:#f3f6fb;border-radius:9px;padding:14px;margin-top:16px}
+  </style>
+</head>
+<body>
+<header><strong>SuperGIROS Alerta</strong><div style="opacity:.9;margin-top:6px">Panel de desarrollo · Simulacro y evacuación</div></header>
+<main>
+  <div class="warning"><strong>Modo demostración:</strong> no envía notificaciones, WhatsApp ni llamadas. No usar para emergencias reales.</div>
+  <section class="panel">
+    <h1>Crear alerta de prueba</h1>
+    <p class="muted">Demostración local del flujo de registro antes de conectar Firebase y los canales de distribución.</p>
+    <form id="testForm">
+      <label for="title">Título</label><input id="title" maxlength="100" required value="Prueba técnica de SuperGIROS Alerta">
+      <label for="message">Mensaje</label><textarea id="message" maxlength="500" required>Esta es una prueba técnica de SuperGIROS Alerta. No evacuar. Continúa con tus labores habituales.</textarea>
+      <label for="site">Sede (opcional)</label><input id="site" maxlength="80" placeholder="Ej. Sede administrativa">
+      <button type="submit">Registrar prueba local</button>
+    </form>
+    <div id="status" class="status" role="status" aria-live="polite">Esperando acción…</div>
+  </section>
+</main>
+<script>
+document.querySelector('#testForm').addEventListener('submit', event => {
+  event.preventDefault();
+  const alert = {
+    id: 'TEST-' + Date.now(), type: 'TEST', status: 'LOCAL_DEMO_ONLY',
+    title: document.querySelector('#title').value.trim(),
+    message: document.querySelector('#message').value.trim(),
+    site: document.querySelector('#site').value.trim() || null,
+    createdAt: new Date().toISOString(),
+    delivery: { push: 'NOT_SENT', whatsapp: 'NOT_SENT', voice: 'NOT_SENT' }
+  };
+  document.querySelector('#status').textContent = JSON.stringify(alert, null, 2) +
+    '\n\nRegistro local de demostración. No se ha contactado a ningún empleado.';
+});
+</script>
+</body>
+</html>
