@@ -1,0 +1,12 @@
+{
+  "name": "supergiros-alerta-admin-demo",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "start": "npx serve .",
+    "test": "echo 'Manual UI smoke test required'"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}
