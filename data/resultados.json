@@ -3,12 +3,28 @@
     "supergiros_sucre": "https://supergirossucre.com.co/",
     "chance_millonario": "https://www.chancemillonario.com/index.php"
   },
-  "actualizado_en": "Pendiente de primera consulta automática",
-  "estado": "pendiente-validacion",
-  "acumulados": [],
-  "principal": {
-    "apuesta": "$6.000",
-    "valor": null
-  },
-  "resultados": []
+  "actualizado_en": "2026-10-21 — datos consultados en páginas oficiales",
+  "estado": "semilla-pendiente-de-primera-ejecucion",
+  "acumulados": [
+    {"cifras":3,"apuesta":"$1.000","valor":7000000},
+    {"cifras":3,"apuesta":"$2.000","valor":15237176},
+    {"cifras":3,"apuesta":"$3.000","valor":50814893},
+    {"cifras":3,"apuesta":"$5.000","valor":60740994},
+    {"cifras":4,"apuesta":"$1.000","valor":629720258},
+    {"cifras":4,"apuesta":"$2.000","valor":321485193},
+    {"cifras":4,"apuesta":"$3.000","valor":550196145},
+    {"cifras":4,"apuesta":"$5.000","valor":919566838}
+  ],
+  "gran_acumulado_3": 133793063,
+  "gran_acumulado_4": 2420968434,
+  "principal": {"apuesta":"$6.000","valor":1382854481,"fecha":"21-10-2026"},
+  "resultados": [
+    {"nombre":"ANTIOQUEÑITA DÍA","fecha":"2026-10-20","numero":"0146"},
+    {"nombre":"ANTIOQUEÑITA TARDE","fecha":"2026-10-20","numero":"3306"},
+    {"nombre":"CAFETERITO NOCHE","fecha":"2026-10-20","numero":"7701"},
+    {"nombre":"CAFETERITO TARDE","fecha":"2026-10-20","numero":"0296"},
+    {"nombre":"CHONTICO DÍA","fecha":"2026-10-20","numero":"0164"},
+    {"nombre":"CHONTICO NOCHE","fecha":"2026-10-20","numero":"3636"}
+  ],
+  "notas": "Valores iniciales tomados de las páginas oficiales el 21 de octubre de 2026. El flujo automático debe validarlos antes de reemplazarlos."
 }
