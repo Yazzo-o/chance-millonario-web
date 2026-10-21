@@ -1,107 +1,111 @@
 #!/usr/bin/env python3
-"""Actualizador prudente: extrae acumulados/resultados de las dos fuentes.
-No modifica resultados.json si no puede validar cifras reales en el HTML obtenido.
-"""
+"""Consulta fuentes oficiales y solo guarda valores que pasan validaciones básicas."""
 from __future__ import annotations
 import json, re, sys
 from datetime import datetime
+from html.parser import HTMLParser
 from pathlib import Path
 from urllib.request import Request, urlopen
-from html.parser import HTMLParser
+from zoneinfo import ZoneInfo
 
-ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "data" / "resultados.json"
-URL_SUPER = "https://supergirossucre.com.co/"
-URL_CHANCE = "https://www.chancemillonario.com/index.php"
-HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; ChanceMillonarioUpdater/1.0; +https://github.com/Yazzo-o/chance-millonario-web)"}
+ROOT=Path(__file__).resolve().parents[1]
+OUT=ROOT/"data"/"resultados.json"
+SUPER_URL="https://supergirossucre.com.co/"
+CHANCE_URL="https://www.chancemillonario.com/index.php"
+HEADERS={"User-Agent":"Mozilla/5.0 (compatible; ChanceMillonarioUpdater/1.0)"}
 
-class TextExtractor(HTMLParser):
+class PageText(HTMLParser):
     def __init__(self):
         super().__init__(convert_charrefs=True); self.parts=[]; self.skip=0
-    def handle_starttag(self, tag, attrs):
-        if tag in ("script","style","noscript"): self.skip += 1
-    def handle_endtag(self, tag):
-        if tag in ("script","style","noscript") and self.skip: self.skip -= 1
-    def handle_data(self, data):
+    def handle_starttag(self,tag,attrs):
+        a=dict(attrs)
+        if tag in ("script","style","noscript"): self.skip+=1
+        alt=a.get("alt") or a.get("title")
+        if alt and any(k in alt.lower() for k in ("cifra","acumulado","chance millonario")):
+            self.parts.append(alt)
+    def handle_endtag(self,tag):
+        if tag in ("script","style","noscript") and self.skip: self.skip-=1
+    def handle_data(self,data):
         if not self.skip and data.strip(): self.parts.append(re.sub(r"\s+"," ",data).strip())
 
 def get_text(url):
     req=Request(url,headers=HEADERS)
-    with urlopen(req,timeout=30) as response:
-        html=response.read().decode("utf-8","replace")
-    parser=TextExtractor(); parser.feed(html)
-    return "\n".join(parser.parts)
+    with urlopen(req,timeout=35) as res:
+        if res.status!=200: raise RuntimeError(f"HTTP {res.status}: {url}")
+        html=res.read().decode("utf-8","replace")
+    p=PageText(); p.feed(html); return " ".join(p.parts)
 
-def money(s):
-    return int(re.sub(r"\D","",s))
+def numbers(region):
+    return [int(x.replace(".","")) for x in re.findall(r"(?<!\d)(?:\$\s*)?(\d{1,3}(?:\.\d{3})+)(?!\d)",region)]
 
-def extract_supergiros(text):
-    # El sitio suele presentar los valores como etiquetas de apuesta seguidas
-    # por su acumulado. Exigimos valores claros para evitar guardar datos parciales.
-    rows=[]
-    lines=[re.sub(r"\s+"," ",x).strip() for x in text.splitlines() if x.strip()]
-    for i,line in enumerate(lines):
-        if "Modalidad 3 cifras" in line or "Modalidad 4 cifras" in line:
-            cifras=3 if "3 cifras" in line else 4
-            window=" ".join(lines[i:i+30])
-            pairs=re.findall(r"\$\s*([1-5]\.000)\s+\$\s*([\d.]{5,})",window)
-            for apuesta,valor in pairs[:4]:
-                rows.append({"cifras":cifras,"apuesta":"$"+apuesta,"valor":money(valor),"fuente":"SuperGIROS Sucre"})
-    # Filtra duplicados manteniendo el orden.
-    unique={}
-    for row in rows: unique[(row["cifras"],row["apuesta"])]=row
-    return list(unique.values())
+def extract_accumulations(text):
+    low=text.lower(); a=low.find("modalidad 3 cifras"); b=low.find("modalidad 4 cifras")
+    end=low.find("resultados",b if b>=0 else 0)
+    if a<0 or b<0: raise RuntimeError("No se hallaron las dos modalidades en SuperGIROS.")
+    n3=numbers(text[a:b]); n4=numbers(text[b:end if end>b else len(text)])
+    if len(n3)<8 or len(n4)<8: raise RuntimeError(f"Formato no reconocido (3 cifras={len(n3)}, 4 cifras={len(n4)} valores).")
+    bets={1000,2000,3000,5000}
+    def rows(nums,cifras):
+        out=[]
+        for i in range(0,8,2):
+            stake,value=nums[i],nums[i+1]
+            if stake not in bets or value<=0: raise RuntimeError("Pareja apuesta/acumulado no válida.")
+            out.append({"cifras":cifras,"apuesta":"$"+format(stake,",").replace(",","."),"valor":value})
+        if {x["apuesta"] for x in out}!={"$1.000","$2.000","$3.000","$5.000"}:
+            raise RuntimeError("Las cuatro apuestas no están completas.")
+        return out
+    def grand(cifras):
+        m=re.search(rf"{cifras}\s*cifras\s+Gran\s+Acumulado\s*\$?\s*([\d.]+)",text,re.I)
+        if not m:return None
+        value=int(m.group(1).replace(".",""))
+        return value if value>0 else None
+    return rows(n3,3)+rows(n4,4),grand(3),grand(4)
 
 def extract_chance(text):
-    # El acumulado destacado se identifica por el rótulo y fecha que le anteceden.
-    patterns=[
-        r"Acumulado\s+\d{2}[-/]\d{2}[-/]\d{4}\s+\$?\s*([\d.]{8,})",
-        r"Acumulado\s+\d{4}-\d{2}-\d{2}\s+\$?\s*([\d.]{8,})",
-    ]
-    for pattern in patterns:
-        match=re.search(pattern,text,re.I)
-        if match:
-            return money(match.group(1))
-    return None
+    m=re.search(r"Acumulado\s+(\d{2}-\d{2}-\d{4}|20\d{2}-\d{2}-\d{2})\s*[#$ ]*\s*([\d.]{7,})",text,re.I)
+    if not m: raise RuntimeError("No se encontró acumulado acompañado por fecha.")
+    value=int(m.group(2).replace(".",""))
+    if not 100_000_000<=value<=100_000_000_000: raise RuntimeError("El acumulado está fuera del rango esperado.")
+    return m.group(1),value
 
 def extract_results(text):
-    # La fuente presenta nombres de sorteos, fecha ISO y cuatro dígitos.
-    rows=[]
-    pattern=re.compile(r"([A-ZÁÉÍÓÚÜÑ][A-ZÁÉÍÓÚÜÑ0-9 .'-]{2,40})\s+(20\d{2}-\d{2}-\d{2})\s+(\d)\s+(\d)\s+(\d)\s+(\d)(?=\s|$)")
-    for m in pattern.finditer(text):
+    pat=re.compile(r"([A-ZÁÉÍÓÚÜÑ][A-ZÁÉÍÓÚÜÑ0-9 .'-]{2,38}?)\s+(20\d{2}-\d{2}-\d{2})\s+(\d)\s+(\d)\s+(\d)\s+(\d)(?=\s|$)")
+    allowed=("ANTIOQUEÑITA","CAFETERITO","CHONTICO","DORADO","CARIBEÑA","CULONA","FANTASTICA","MOTILON","PAISITA","PIJAO","SAMAN","SINUANO")
+    out=[];seen=set()
+    for m in pat.finditer(text):
         name=re.sub(r"\s+"," ",m.group(1)).strip()
-        if any(word in name for word in ("ACUMULADO","RESULTADOS","CHANCE MILLONARIO")): continue
-        rows.append({"nombre":name,"fecha":m.group(2),"numero":"".join(m.group(i) for i in range(3,7))})
-    seen=set(); out=[]
-    for r in rows:
-        key=(r["nombre"],r["fecha"])
-        if key not in seen: seen.add(key); out.append(r)
+        if not any(name.startswith(k) for k in allowed):continue
+        row={"nombre":name,"fecha":m.group(2),"numero":"".join(m.group(i) for i in range(3,7))}
+        key=(row["nombre"],row["fecha"])
+        if key not in seen:seen.add(key);out.append(row)
+    if not out:raise RuntimeError("No se validaron resultados de cuatro cifras.")
     return out[:60]
 
 def main():
+    old=json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else {}
+    updates=[];errors=[]
     try:
-        sg_text=get_text(URL_SUPER)
-        ch_text=get_text(URL_CHANCE)
-        sg=extract_supergiros(sg_text)
-        jackpot=extract_chance(ch_text)
-        results=extract_results(ch_text)
-        # Se requiere al menos una extracción válida antes de guardar. No inventa cifras.
-        if not sg and jackpot is None and not results:
-            raise RuntimeError("Las fuentes respondieron, pero la estructura de datos no coincide con los patrones validados.")
-        existing=json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else {}
-        data={
-            "fuentes":{"supergiros_sucre":URL_SUPER,"chance_millonario":URL_CHANCE},
-            "actualizado_en":datetime.now().astimezone().isoformat(timespec="seconds"),
-            "estado":"actualizado-parcial" if not sg or jackpot is None or not results else "actualizado",
-            "acumulados":sg or existing.get("acumulados",[]),
-            "principal":{"apuesta":"$6.000","valor":jackpot if jackpot is not None else (existing.get("principal") or {}).get("valor")},
-            "resultados":results or existing.get("resultados",[]),
-            "notas":"Los datos que no se pudieron validar conservan el último valor guardado."
-        }
-        OUT.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-        print("Actualización guardada:",data["estado"],"acumulados:",len(data["acumulados"]),"resultados:",len(data["resultados"]),"principal:",data["principal"]["valor"])
-    except Exception as exc:
-        print("ERROR: no se reemplazó data/resultados.json:",exc,file=sys.stderr)
+        rows,g3,g4=extract_accumulations(get_text(SUPER_URL))
+        old["acumulados"]=rows
+        if g3 is not None:old["gran_acumulado_3"]=g3
+        if g4 is not None:old["gran_acumulado_4"]=g4
+        updates.append("acumulados SuperGIROS")
+    except Exception as e:errors.append("SuperGIROS: "+str(e))
+    try:
+        text=get_text(CHANCE_URL)
+        date,value=extract_chance(text);results=extract_results(text)
+        old["principal"]={"apuesta":"$6.000","valor":value,"fecha":date}
+        old["resultados"]=results
+        updates.append("acumulado y resultados Chance Millonario")
+    except Exception as e:errors.append("Chance Millonario: "+str(e))
+    if not updates:
+        print("No se guardaron cambios: ninguna fuente pasó validación.\n"+"\n".join(errors),file=sys.stderr)
         sys.exit(1)
-
-if __name__=="__main__": main()
+    old["fuentes"]={"supergiros_sucre":SUPER_URL,"chance_millonario":CHANCE_URL}
+    old["actualizado_en"]=datetime.now(ZoneInfo("America/Bogota")).isoformat(timespec="seconds")
+    old["estado"]="actualizado" if not errors else "actualizado-parcial"
+    old["errores"]=errors
+    OUT.write_text(json.dumps(old,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    print(f"Estado={old['estado']}; acumulados={len(old.get('acumulados',[]))}; resultados={len(old.get('resultados',[]))}")
+    if errors:print("\n".join(errors))
+if __name__=="__main__":main()
