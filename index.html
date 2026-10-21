@@ -2,73 +2,60 @@
 <html lang="es">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#35005d">
-<title>Chance Millonario | Acumulados y resultados</title>
+<meta name="theme-color" content="#35105f">
+<meta name="description" content="Consulta los acumulados y resultados recientes de Chance Millonario con datos de fuentes oficiales.">
+<title>Chance Millonario | Acumulados vigentes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-@font-face{font-family:Montserrat;src:url('assets/fonts/Montserrat-ExtraBold.woff2') format('woff2');font-weight:800;font-display:swap}
-@font-face{font-family:Montserrat;src:url('assets/fonts/Montserrat-Bold.woff') format('woff');font-weight:700;font-display:swap}
-@font-face{font-family:Montserrat;src:url('assets/fonts/Montserrat-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
-:root{--purple:#3b0875;--purple2:#250044;--gold:#ffd84a;--white:#fff}
-*{box-sizing:border-box}body{margin:0;font-family:Montserrat,Arial,sans-serif;background:#24003f;color:#fff}
-.page{max-width:1100px;margin:auto;min-height:100vh;overflow:hidden;background:radial-gradient(ellipse at 15% 10%,#7641b4 0,transparent 42%),linear-gradient(160deg,#54209a 0%,#31065e 50%,#004a92 100%);position:relative}
-.page:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 8% 70%,#64cfff55,transparent 24%),radial-gradient(circle at 90% 78%,#f2a64222,transparent 25%);pointer-events:none}
-header,main,footer{position:relative;z-index:1}header{text-align:center;padding:34px 18px 10px}
-.eyebrow{font-style:italic;color:var(--gold);font-size:clamp(22px,4vw,36px);font-weight:800;margin:0}
-h1{font-size:clamp(35px,7vw,66px);line-height:.92;margin:0;text-transform:uppercase;letter-spacing:-2px;font-weight:800}
-.tagline{color:var(--gold);font-weight:800;font-style:italic;font-size:clamp(23px,4.3vw,40px);margin:8px 0}
-h2{font-size:clamp(30px,5vw,52px);text-align:center;font-weight:800;font-style:italic;margin:6px 0 8px;text-transform:uppercase}
-.lead{text-align:center;margin:0 auto 22px;padding:0 16px;font-size:clamp(14px,2.3vw,21px);font-weight:700}
-.group-title{font-weight:800;font-style:italic;font-size:clamp(25px,4.2vw,38px);text-align:center;margin:22px 0 14px}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:27px 24px;max-width:850px;margin:0 auto;padding:0 26px}
-.pill-wrap{position:relative;padding-top:12px}
-.pill{background:linear-gradient(180deg,#6511a6,#33025d 62%,#250046);border:4px solid #e9b83b;border-radius:999px;min-height:75px;display:flex;align-items:center;justify-content:center;padding:14px 10px 10px;box-shadow:inset 0 3px 7px #fff4,0 4px 1px #17002d;color:var(--gold);font-size:clamp(24px,4.5vw,46px);font-weight:800;letter-spacing:-1.5px;text-shadow:0 2px 1px #4d2b1b;white-space:nowrap}
-.stake{position:absolute;left:50%;top:0;transform:translateX(-50%);z-index:2;color:#2b1533;font-size:clamp(15px,2.5vw,22px);font-weight:800;background:linear-gradient(#fff1a6,#f7c539 56%,#bf7a0d);border:2px solid #9d691b;border-radius:30px;padding:3px 18px;box-shadow:0 2px 4px #160022aa;white-space:nowrap}
-.featured{margin:26px auto 14px;max-width:780px;padding:0 22px;position:relative}
-.featured .pill{min-height:126px;font-size:clamp(39px,8vw,76px);color:white;border-width:6px;padding:25px 12px 16px;letter-spacing:-2px}
-.featured .stake{font-size:clamp(21px,3.5vw,32px);padding:4px 24px;top:0}
-.feature-caption{text-align:center;font-size:13px;color:#fce9ff;margin:10px auto 26px;padding:0 18px}
-.results{background:#fdfaff;color:#2b1244;margin-top:28px;padding:32px clamp(14px,4vw,38px) 38px}
-.results h2{color:#4c1383;margin:0 0 6px;font-size:clamp(27px,4vw,40px);font-style:normal}
-.last-update{text-align:center;font-size:13px;color:#62536d;margin-bottom:20px}
-.result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:12px}
-.result-card{border:1px solid #e0d4ef;border-radius:14px;padding:13px 10px;text-align:center;background:#fff;box-shadow:0 4px 12px #2f04550d}
-.result-name{font-weight:800;font-size:12px;min-height:30px;display:flex;align-items:center;justify-content:center}
-.result-date{color:#75647f;font-size:11px;margin:4px 0 9px}
-.digits{display:flex;gap:4px;justify-content:center}
-.digit{width:29px;height:36px;display:grid;place-items:center;background:#411078;color:#ffdf52;font-size:19px;font-weight:800;border-radius:5px}
-.status{display:inline-flex;align-items:center;gap:7px;margin:16px auto 0;font-size:12px;color:#64566c;justify-content:center;width:100%}.dot{height:8px;width:8px;background:#13a36f;border-radius:50%}
-footer{text-align:center;padding:17px;font-size:11px;color:#f2e9ff;background:#25003f}
-a{color:inherit} .error{color:#975500;background:#fff4d2;padding:10px;border-radius:9px;text-align:center;margin:12px auto;max-width:650px;font-size:12px}
-@media(max-width:560px){header{padding-top:25px}.grid{gap:22px 10px;padding:0 12px}.pill{font-size:clamp(17px,4.6vw,25px);min-height:55px;border-width:3px;letter-spacing:-.7px;padding:12px 4px 7px}.stake{font-size:clamp(12px,3.1vw,16px);padding:2px 10px}.featured{padding:0 12px}.featured .pill{min-height:82px;font-size:clamp(26px,7.7vw,41px);letter-spacing:-1.5px;border-width:4px}.featured .stake{font-size:18px}.result-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+:root{--violet:#4d1689;--deep:#25003f;--gold:#ffdc4a;--gold2:#d99a1d;--white:#fff}
+*{box-sizing:border-box}body{margin:0;background:#210036;color:var(--white);font-family:Montserrat,Arial,sans-serif}
+.poster{max-width:1120px;margin:auto;min-height:100vh;position:relative;overflow:hidden;background:radial-gradient(ellipse at 18% 9%,#7c48b2 0,transparent 37%),radial-gradient(ellipse at 80% 42%,#5430a9 0,transparent 40%),linear-gradient(160deg,#54209a 0%,#31035c 49%,#00619a 100%)}
+.poster:before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 5% 78%,#72d5ff72,transparent 22%),radial-gradient(ellipse at 95% 80%,#ffb5363b,transparent 25%);opacity:.9}
+header,main,footer{position:relative;z-index:1}header{text-align:center;padding:35px 16px 8px}.script{margin:0;color:var(--gold);font-size:clamp(22px,4vw,37px);font-weight:800;font-style:italic}
+h1{margin:0;text-transform:uppercase;font-weight:900;line-height:.9;font-size:clamp(38px,7vw,73px);letter-spacing:-2.8px;text-shadow:0 2px 1px #2a0044}.tagline{margin:8px 0 12px;color:var(--gold);font-size:clamp(24px,4.1vw,42px);font-weight:800;font-style:italic}
+h2{margin:10px 0 7px;text-align:center;font-size:clamp(29px,5.4vw,54px);font-weight:900;font-style:italic;text-transform:uppercase}.subhead{text-align:center;margin:0 auto 18px;padding:0 18px;font-size:clamp(13px,2.1vw,20px);font-weight:700}
+.section-title{margin:20px 0 14px;text-align:center;font-size:clamp(27px,4.5vw,40px);font-weight:900;font-style:italic;text-transform:uppercase}
+.amount-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:25px 22px;max-width:860px;padding:0 23px;margin:0 auto}.amount-wrap{position:relative;padding-top:12px;min-width:0}
+.amount-pill{width:100%;min-height:76px;display:flex;align-items:center;justify-content:center;text-align:center;padding:13px 7px 9px;border:4px solid var(--gold2);border-radius:999px;background:linear-gradient(180deg,#6c1bb0 0%,#3a0872 58%,#260049 100%);box-shadow:inset 0 3px 8px #ffffff3b,0 5px 0 #25003e;color:var(--gold);font-size:clamp(23px,4.3vw,46px);font-weight:900;letter-spacing:-1.6px;text-shadow:0 2px 1px #49243e;white-space:nowrap}
+.stake{position:absolute;z-index:2;top:0;left:50%;transform:translateX(-50%);white-space:nowrap;padding:2px 17px 3px;border:2px solid #ab7719;border-radius:24px;background:linear-gradient(#fff3a8,#f6c53c 56%,#c98918);box-shadow:0 2px 4px #1300239c;color:#2c183c;font-size:clamp(14px,2.5vw,22px);font-weight:900}
+.grand{margin:8px auto 0;text-align:center;color:#ffed95;font-size:13px;font-weight:700}
+.featured{position:relative;max-width:830px;margin:31px auto 0;padding:13px 25px 0}.featured .amount-pill{min-height:124px;border-width:6px;color:#fff;font-size:clamp(40px,8.4vw,82px);letter-spacing:-3px;padding:25px 8px 17px}.featured .stake{font-size:clamp(19px,3.5vw,32px);padding:4px 26px;top:0}
+.update-note{text-align:center;color:#f3e7ff;margin:15px 14px 25px;font-size:12px}
+.results{background:#fffaff;color:#2c1045;padding:31px clamp(14px,4vw,40px) 38px}.results h2{font-style:normal;font-size:clamp(27px,4vw,39px);color:#481080;margin:0 0 5px}
+.updated{text-align:center;color:#756482;font-size:12px;margin:0 auto 20px}.result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:12px}
+.result-card{border:1px solid #dfd0f0;background:white;border-radius:13px;padding:14px 9px;text-align:center;box-shadow:0 5px 14px #37065c0e}.result-name{min-height:34px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900}
+.result-date{margin:4px 0 10px;color:#766580;font-size:11px}.digits{display:flex;justify-content:center;gap:4px}.digit{display:grid;place-items:center;width:30px;height:37px;border-radius:5px;background:#411078;color:#ffdf4e;font-size:20px;font-weight:900}
+.warning{display:none;max-width:720px;margin:12px auto;padding:11px 14px;border-radius:8px;background:#fff1cf;color:#764e00;text-align:center;font-size:12px}
+.sources{display:flex;justify-content:center;flex-wrap:wrap;gap:9px;margin-top:24px}.sources a{border:1px solid #d9c8eb;border-radius:30px;padding:9px 14px;color:#4a177b;text-decoration:none;font-size:12px;font-weight:800}.sources a:hover{background:#f0e5fa}
+footer{text-align:center;background:#220039;padding:17px 12px;color:#f2e9ff;font-size:11px}
+@media(max-width:560px){header{padding-top:25px}.amount-grid{gap:22px 9px;padding:0 10px}.amount-pill{min-height:56px;font-size:clamp(17px,4.5vw,25px);letter-spacing:-.8px;border-width:3px;padding:12px 3px 7px}.stake{font-size:clamp(12px,3.1vw,16px);padding:2px 10px}.grand{font-size:10px}.featured{padding:13px 10px 0;margin-top:25px}.featured .amount-pill{min-height:83px;font-size:clamp(26px,7.5vw,43px);letter-spacing:-1.6px;border-width:4px}.featured .stake{font-size:18px}.result-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 </head>
-<body><div class="page">
-<header><p class="eyebrow">Nuevo</p><h1>Chance<br>Millonario</h1><p class="tagline">Cambia tu vida</p><h2>Acumulados</h2><p class="lead">Juega 5 números de 4 cifras con dos loterías y sorteos.</p></header>
+<body><div class="poster">
+<header><p class="script">Nuevo</p><h1>Chance<br>Millonario</h1><p class="tagline">Cambia tu vida</p><h2>Acumulados</h2><p class="subhead">Juega 5 números de 4 cifras con dos loterías y sorteos.</p></header>
 <main>
-<section aria-labelledby="three-title"><h3 id="three-title" class="group-title">3 cifras</h3><div class="grid" id="three-grid"></div></section>
-<section aria-labelledby="four-title"><h3 id="four-title" class="group-title">4 cifras</h3><div class="grid" id="four-grid"></div></section>
+<section><h3 class="section-title">3 cifras</h3><div class="amount-grid" id="three"></div><p class="grand" id="grand-three"></p></section>
+<section><h3 class="section-title">4 cifras</h3><div class="amount-grid" id="four"></div><p class="grand" id="grand-four"></p></section>
 <section class="featured" id="featured"></section>
-<p class="feature-caption">Acumulados informativos. Consulta siempre los valores vigentes en las fuentes oficiales antes de jugar.</p>
-<section class="results"><h2>Resultados recientes</h2><div class="last-update" id="updated">Consultando última actualización…</div><div id="result-warning" hidden class="error"></div><div class="result-grid" id="results-grid"></div><div class="status"><span class="dot"></span><span>Datos sujetos a confirmación en las fuentes oficiales.</span></div></section>
-</main><footer>Juega legal y con responsabilidad. Prohibida la venta a menores de edad. · <a href="https://supergirossucre.com.co/" target="_blank" rel="noopener">SuperGIROS Sucre</a> · <a href="https://www.chancemillonario.com/index.php" target="_blank" rel="noopener">Chance Millonario</a></footer>
+<p class="update-note">Valores informativos tomados de fuentes oficiales. Confirma siempre las condiciones vigentes antes de jugar.</p>
+<section class="results"><h2>Resultados recientes</h2><p class="updated" id="updated">Cargando datos verificados…</p><div class="warning" id="warning"></div><div class="result-grid" id="results"></div><div class="sources"><a href="https://supergirossucre.com.co/" target="_blank" rel="noopener">Fuente: SuperGIROS Sucre ↗</a><a href="https://www.chancemillonario.com/index.php" target="_blank" rel="noopener">Fuente: Chance Millonario ↗</a></div></section>
+</main><footer>Juega legal y con responsabilidad. Prohibida la venta a menores de edad.</footer>
 </div>
 <script>
-const fmt=n=>new Intl.NumberFormat('es-CO',{style:'currency',currency:'COP',maximumFractionDigits:0}).format(Number(n||0)).replace(/\u00a0/g,' ');
-function pill(item){return '<div class="pill-wrap"><span class="stake">'+item.apuesta+'</span><div class="pill">'+fmt(item.valor)+'</div></div>'}
-function renderAmounts(data){
-const three=(data.acumulados||[]).filter(x=>x.cifras===3),four=(data.acumulados||[]).filter(x=>x.cifras===4);
-document.getElementById('three-grid').innerHTML=three.map(pill).join('')||'<div class="error">Acumulados de 3 cifras no disponibles.</div>';
-document.getElementById('four-grid').innerHTML=four.map(pill).join('');
-const f=data.principal||{apuesta:'$6.000',valor:0};
-document.getElementById('featured').innerHTML='<span class="stake">'+f.apuesta+'</span><div class="pill">'+(f.valor?fmt(f.valor):'Consultando…')+'</div>';
+const money=n=>new Intl.NumberFormat('es-CO',{style:'currency',currency:'COP',maximumFractionDigits:0}).format(Number(n||0)).replace(/\u00a0/g,' ');
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function amountCard(a){return '<div class="amount-wrap"><span class="stake">'+esc(a.apuesta)+'</span><div class="amount-pill">'+money(a.valor)+'</div></div>'}
+function render(d){
+const three=(d.acumulados||[]).filter(a=>a.cifras===3),four=(d.acumulados||[]).filter(a=>a.cifras===4);
+document.getElementById('three').innerHTML=three.map(amountCard).join('')||'<p>Acumulados pendientes de validar.</p>';
+document.getElementById('four').innerHTML=four.map(amountCard).join('')||'<p>Acumulados pendientes de validar.</p>';
+document.getElementById('grand-three').textContent=d.gran_acumulado_3?('Gran acumulado: '+money(d.gran_acumulado_3)):'';
+document.getElementById('grand-four').textContent=d.gran_acumulado_4?('Gran acumulado: '+money(d.gran_acumulado_4)):'';
+const p=d.principal||{};document.getElementById('featured').innerHTML='<span class="stake">'+esc(p.apuesta||'$6.000')+'</span><div class="amount-pill">'+(p.valor?money(p.valor):'Pendiente de validar')+'</div>';
+document.getElementById('updated').textContent='Última actualización válida: '+(d.actualizado_en||'pendiente');
+document.getElementById('results').innerHTML=(d.resultados||[]).map(r=>'<article class="result-card"><div class="result-name">'+esc(r.nombre)+'</div><div class="result-date">'+esc(r.fecha||'Fecha no disponible')+'</div><div class="digits">'+String(r.numero||'').padStart(4,'0').slice(-4).split('').map(n=>'<span class="digit">'+n+'</span>').join('')+'</div></article>').join('');
+if(d.estado&&d.estado!=='actualizado'&&d.estado!=='semilla-pendiente-de-primera-ejecucion'){const w=document.getElementById('warning');w.style.display='block';w.textContent='Actualización parcial: algunos datos conservan el último valor válido. Verifica las fuentes oficiales.'}
 }
-function renderResults(data){
-const grid=document.getElementById('results-grid');
-grid.innerHTML=(data.resultados||[]).map(r=>'<article class="result-card"><div class="result-name">'+escapeHtml(r.nombre)+'</div><div class="result-date">'+escapeHtml(r.fecha||'Fecha no disponible')+'</div><div class="digits">'+String(r.numero||'').padStart(4,'0').slice(-4).split('').map(n=>'<span class="digit">'+n+'</span>').join('')+'</div></article>').join('');
-document.getElementById('updated').textContent='Última consulta exitosa: '+(data.actualizado_en||'sin confirmar');
-if(!data.resultados?.length){const w=document.getElementById('result-warning');w.hidden=false;w.textContent='No se pudieron validar resultados nuevos. Consulta las fuentes oficiales.'}
-}
-function escapeHtml(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-fetch('data/resultados.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('data');return r.json()}).then(d=>{renderAmounts(d);renderResults(d)}).catch(()=>{document.getElementById('updated').textContent='Datos locales de demostración; actualización aún no configurada.';document.getElementById('three-grid').innerHTML='<p>Consulta los acumulados oficiales.</p>';document.getElementById('four-grid').innerHTML='';document.getElementById('featured').innerHTML='<div class="pill">Ver acumulado oficial</div>'});
-</script>
-</body></html>
+fetch('./data/resultados.json?ts='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('No fue posible cargar datos');return r.json()}).then(render).catch(()=>{document.getElementById('updated').textContent='No se pudieron cargar los datos automáticos. Consulta las fuentes oficiales.';document.getElementById('warning').style.display='block';document.getElementById('warning').textContent='Error al leer el archivo de datos.'});
+</script></body></html>
