@@ -3,23 +3,23 @@
     "supergiros_sucre": "https://supergirossucre.com.co/",
     "chance_millonario": "https://www.chancemillonario.com/index.php"
   },
-  "actualizado_en": "2026-10-21T09:07:17-05:00",
+  "actualizado_en": "2026-10-22T06:44:02-05:00",
   "estado": "actualizado",
   "acumulados": [
     {
       "cifras": 3,
       "apuesta": "$5.000",
-      "valor": 60740994
+      "valor": 61515923
     },
     {
       "cifras": 3,
       "apuesta": "$2.000",
-      "valor": 15237176
+      "valor": 16399293
     },
     {
       "cifras": 3,
       "apuesta": "$3.000",
-      "valor": 50814893
+      "valor": 52953071
     },
     {
       "cifras": 3,
@@ -29,36 +29,61 @@
     {
       "cifras": 4,
       "apuesta": "$5.000",
-      "valor": 919566838
+      "valor": 920002108
     },
     {
       "cifras": 4,
       "apuesta": "$2.000",
-      "valor": 321485193
+      "valor": 321967613
     },
     {
       "cifras": 4,
       "apuesta": "$3.000",
-      "valor": 550196145
+      "valor": 551039231
     },
     {
       "cifras": 4,
       "apuesta": "$1.000",
-      "valor": 629720258
+      "valor": 633347383
     }
   ],
-  "gran_acumulado_3": 133793063,
-  "gran_acumulado_4": 2420968434,
+  "gran_acumulado_3": 137868287,
+  "gran_acumulado_4": 2426356335,
   "principal": {
     "apuesta": "$6.000",
-    "valor": 1382854481,
-    "fecha": "21-10-2026"
+    "valor": 1404087523,
+    "fecha": "22-10-2026"
   },
   "resultados": [
     {
       "nombre": "ANTIOQUEÑITA DÍA",
       "fecha": "2026-10-21",
-      "numero": "0000"
+      "numero": "8140"
+    },
+    {
+      "nombre": "ANTIOQUEÑITA TARDE",
+      "fecha": "2026-10-21",
+      "numero": "4904"
+    },
+    {
+      "nombre": "CAFETERITO NOCHE",
+      "fecha": "2026-10-21",
+      "numero": "8206"
+    },
+    {
+      "nombre": "CAFETERITO TARDE",
+      "fecha": "2026-10-21",
+      "numero": "9880"
+    },
+    {
+      "nombre": "CHONTICO DÍA",
+      "fecha": "2026-10-21",
+      "numero": "0542"
+    },
+    {
+      "nombre": "CHONTICO NOCHE",
+      "fecha": "2026-10-21",
+      "numero": "2676"
     }
   ],
   "notas": "Valores iniciales tomados de las páginas oficiales el 21 de octubre de 2026. El flujo automático debe validarlos antes de reemplazarlos.",
