@@ -3,23 +3,23 @@
     "supergiros_sucre": "https://supergirossucre.com.co/",
     "chance_millonario": "https://www.chancemillonario.com/index.php"
   },
-  "actualizado_en": "2026-10-25T06:40:33-05:00",
+  "actualizado_en": "2026-10-26T12:23:11-05:00",
   "estado": "actualizado",
   "acumulados": [
     {
       "cifras": 3,
       "apuesta": "$5.000",
-      "valor": 64098836
+      "valor": 64479536
     },
     {
       "cifras": 3,
       "apuesta": "$2.000",
-      "valor": 20150119
+      "valor": 20767531
     },
     {
       "cifras": 3,
       "apuesta": "$3.000",
-      "valor": 60173165
+      "valor": 61405631
     },
     {
       "cifras": 3,
@@ -29,61 +29,36 @@
     {
       "cifras": 4,
       "apuesta": "$5.000",
-      "valor": 921503806
+      "valor": 921725896
     },
     {
       "cifras": 4,
       "apuesta": "$2.000",
-      "valor": 323644941
+      "valor": 323890521
     },
     {
       "cifras": 4,
       "apuesta": "$3.000",
-      "valor": 553698766
+      "valor": 554132518
     },
     {
       "cifras": 4,
       "apuesta": "$1.000",
-      "valor": 644786343
+      "valor": 646868169
     }
   ],
-  "gran_acumulado_3": 151422120,
-  "gran_acumulado_4": 2443633856,
+  "gran_acumulado_3": 153652698,
+  "gran_acumulado_4": 2446617104,
   "principal": {
     "apuesta": "$6.000",
-    "valor": 1480247640,
-    "fecha": "25-10-2026"
+    "valor": 1488885648,
+    "fecha": "26-10-2026"
   },
   "resultados": [
     {
       "nombre": "ANTIOQUEÑITA DÍA",
-      "fecha": "2026-10-24",
-      "numero": "0431"
-    },
-    {
-      "nombre": "ANTIOQUEÑITA TARDE",
-      "fecha": "2026-10-24",
-      "numero": "7106"
-    },
-    {
-      "nombre": "CAFETERITO NOCHE",
-      "fecha": "2026-10-24",
-      "numero": "2675"
-    },
-    {
-      "nombre": "CAFETERITO TARDE",
-      "fecha": "2026-10-24",
-      "numero": "8432"
-    },
-    {
-      "nombre": "CHONTICO DÍA",
-      "fecha": "2026-10-24",
-      "numero": "0121"
-    },
-    {
-      "nombre": "CHONTICO NOCHE",
-      "fecha": "2026-10-24",
-      "numero": "3161"
+      "fecha": "2026-10-26",
+      "numero": "4902"
     }
   ],
   "notas": "Valores iniciales tomados de las páginas oficiales el 21 de octubre de 2026. El flujo automático debe validarlos antes de reemplazarlos.",
