@@ -3,62 +3,62 @@
     "supergiros_sucre": "https://supergirossucre.com.co/",
     "chance_millonario": "https://www.chancemillonario.com/index.php"
   },
-  "actualizado_en": "2026-10-29T12:25:56-05:00",
+  "actualizado_en": "2026-10-30T12:01:21-05:00",
   "estado": "actualizado",
   "acumulados": [
     {
       "cifras": 3,
       "apuesta": "$5.000",
-      "valor": 67087295
+      "valor": 68113180
     },
     {
       "cifras": 3,
       "apuesta": "$2.000",
-      "valor": 14000000
+      "valor": 15239574
     },
     {
       "cifras": 3,
       "apuesta": "$3.000",
-      "valor": 21000000
+      "valor": 22959437
     },
     {
       "cifras": 3,
       "apuesta": "$1.000",
-      "valor": 18430752
+      "valor": 22436089
     },
     {
       "cifras": 4,
       "apuesta": "$5.000",
-      "valor": 923148786
+      "valor": 923721766
     },
     {
       "cifras": 4,
       "apuesta": "$2.000",
-      "valor": 325491988
+      "valor": 326085290
     },
     {
       "cifras": 4,
       "apuesta": "$3.000",
-      "valor": 556528154
+      "valor": 557360843
     },
     {
       "cifras": 4,
       "apuesta": "$1.000",
-      "valor": 657820792
+      "valor": 661540339
     }
   ],
-  "gran_acumulado_3": 120518047,
-  "gran_acumulado_4": 2462989720,
+  "gran_acumulado_3": 128748280,
+  "gran_acumulado_4": 2468708238,
   "principal": {
     "apuesta": "$6.000",
-    "valor": 1554570824,
-    "fecha": "29-10-2026"
+    "valor": 1576780177,
+    "fecha": "30-10-2026"
   },
   "resultados": [
     {
       "nombre": "ANTIOQUEÑITA DÍA",
-      "fecha": "2026-10-29",
-      "numero": "6365"
+      "fecha": "2026-10-30",
+      "numero": "8717"
     }
   ],
   "notas": "Valores iniciales tomados de las páginas oficiales el 21 de octubre de 2026. El flujo automático debe validarlos antes de reemplazarlos.",
