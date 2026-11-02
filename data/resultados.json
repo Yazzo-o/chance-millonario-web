@@ -3,87 +3,82 @@
     "supergiros_sucre": "https://supergirossucre.com.co/",
     "chance_millonario": "https://www.chancemillonario.com/index.php"
   },
-  "actualizado_en": "2026-11-01T12:07:42-05:00",
+  "actualizado_en": "2026-11-02T15:46:42-05:00",
   "estado": "actualizado",
   "acumulados": [
     {
       "cifras": 3,
       "apuesta": "$5.000",
-      "valor": 70589286
+      "valor": 71077521
     },
     {
       "cifras": 3,
       "apuesta": "$2.000",
-      "valor": 17988987
+      "valor": 18644752
     },
     {
       "cifras": 3,
       "apuesta": "$3.000",
-      "valor": 23254360
+      "valor": 24299060
     },
     {
       "cifras": 3,
       "apuesta": "$1.000",
-      "valor": 11091926
+      "valor": 13413713
     },
     {
       "cifras": 4,
       "apuesta": "$5.000",
-      "valor": 924980631
+      "valor": 925227795
     },
     {
       "cifras": 4,
       "apuesta": "$2.000",
-      "valor": 327301173
+      "valor": 327570787
     },
     {
       "cifras": 4,
       "apuesta": "$3.000",
-      "valor": 559224409
+      "valor": 559664059
     },
     {
       "cifras": 4,
       "apuesta": "$1.000",
-      "valor": 669361415
+      "valor": 671507695
     }
   ],
-  "gran_acumulado_3": 122924559,
-  "gran_acumulado_4": 2480867628,
+  "gran_acumulado_3": 127435046,
+  "gran_acumulado_4": 2483970336,
   "principal": {
     "apuesta": "$6.000",
-    "valor": 1636656976,
-    "fecha": "01-11-2026"
+    "valor": 1645981909,
+    "fecha": "02-11-2026"
   },
   "resultados": [
     {
       "nombre": "ANTIOQUEÑITA DÍA",
-      "fecha": "2026-10-31",
-      "numero": "0226"
+      "fecha": "2026-11-01",
+      "numero": "5367"
     },
     {
       "nombre": "ANTIOQUEÑITA TARDE",
-      "fecha": "2026-10-31",
-      "numero": "2340"
+      "fecha": "2026-11-01",
+      "numero": "0759"
     },
     {
       "nombre": "CAFETERITO NOCHE",
-      "fecha": "2026-10-31",
-      "numero": "9494"
-    },
-    {
-      "nombre": "CAFETERITO TARDE",
-      "fecha": "2026-10-31",
-      "numero": "4778"
+      "fecha": "2026-11-01",
+      "numero": "5904"
     },
     {
       "nombre": "CHONTICO DÍA",
-      "fecha": "2026-10-31",
-      "numero": "4935"
+      "fecha": "2026-11-01",
+      "numero": "7422"
     },
     {
       "nombre": "CHONTICO NOCHE",
-      "fecha": "2026-10-31",
-      "numero": "0446"
+      "fecha": "2026-11-01",
+      "numero": "7059"
     }
   ],
   "notas": "Valores iniciales tomados de las páginas oficiales el 21 de octubre de 2026. El flujo automático debe validarlos antes de reemplazarlos.",
