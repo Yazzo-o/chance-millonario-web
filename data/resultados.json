@@ -3,56 +3,56 @@
     "supergiros_sucre": "https://supergirossucre.com.co/",
     "chance_millonario": "https://www.chancemillonario.com/index.php"
   },
-  "actualizado_en": "2026-11-05T13:45:18-05:00",
+  "actualizado_en": "2026-11-06T12:57:26-05:00",
   "estado": "actualizado",
   "acumulados": [
     {
       "cifras": 3,
       "apuesta": "$5.000",
-      "valor": 73733993
+      "valor": 74814104
     },
     {
       "cifras": 3,
       "apuesta": "$2.000",
-      "valor": 15168471
+      "valor": 16385927
     },
     {
       "cifras": 3,
       "apuesta": "$3.000",
-      "valor": 28512666
+      "valor": 31430848
     },
     {
       "cifras": 3,
       "apuesta": "$1.000",
-      "valor": 7000000
+      "valor": 10908116
     },
     {
       "cifras": 4,
       "apuesta": "$5.000",
-      "valor": 926417459
+      "valor": 926866775
     },
     {
       "cifras": 4,
       "apuesta": "$2.000",
-      "valor": 328971769
+      "valor": 329462273
     },
     {
       "cifras": 4,
       "apuesta": "$3.000",
-      "valor": 561881880
+      "valor": 562706973
     },
     {
       "cifras": 4,
       "apuesta": "$1.000",
-      "valor": 681443987
+      "valor": 685145540
     }
   ],
-  "gran_acumulado_3": 124415130,
-  "gran_acumulado_4": 2498715095,
+  "gran_acumulado_3": 133538995,
+  "gran_acumulado_4": 2504181561,
   "principal": {
     "apuesta": "$6.000",
-    "valor": 1705478867,
-    "fecha": "05-11-2026"
+    "valor": 1728412178,
+    "fecha": "06-11-2026"
   },
   "resultados": [
     {
@@ -61,9 +61,29 @@
       "numero": "8630"
     },
     {
+      "nombre": "ANTIOQUEÑITA TARDE",
+      "fecha": "2026-11-05",
+      "numero": "0496"
+    },
+    {
+      "nombre": "CAFETERITO NOCHE",
+      "fecha": "2026-11-05",
+      "numero": "0697"
+    },
+    {
+      "nombre": "CAFETERITO TARDE",
+      "fecha": "2026-11-05",
+      "numero": "7086"
+    },
+    {
       "nombre": "CHONTICO DÍA",
       "fecha": "2026-11-05",
       "numero": "0158"
+    },
+    {
+      "nombre": "CHONTICO NOCHE",
+      "fecha": "2026-11-05",
+      "numero": "6974"
     }
   ],
   "notas": "Valores iniciales tomados de las páginas oficiales el 21 de octubre de 2026. El flujo automático debe validarlos antes de reemplazarlos.",
