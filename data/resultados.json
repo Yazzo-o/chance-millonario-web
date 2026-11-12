@@ -3,8 +3,8 @@
     "supergiros_sucre": "https://supergirossucre.com.co/",
     "chance_millonario": "https://www.chancemillonario.com/index.php"
   },
-  "actualizado_en": "2026-11-11T13:41:58-05:00",
-  "estado": "actualizado",
+  "actualizado_en": "2026-11-12T13:56:00-05:00",
+  "estado": "actualizado-parcial",
   "acumulados": [
     {
       "cifras": 3,
@@ -51,8 +51,8 @@
   "gran_acumulado_4": 2529727215,
   "principal": {
     "apuesta": "$6.000",
-    "valor": 1842560262,
-    "fecha": "11-11-2026"
+    "valor": 1866892657,
+    "fecha": "12-11-2026"
   },
   "resultados": [
     {
@@ -61,11 +61,33 @@
       "numero": "2337"
     },
     {
+      "nombre": "ANTIOQUEÑITA TARDE",
+      "fecha": "2026-11-11",
+      "numero": "0790"
+    },
+    {
+      "nombre": "CAFETERITO NOCHE",
+      "fecha": "2026-11-11",
+      "numero": "1847"
+    },
+    {
+      "nombre": "CAFETERITO TARDE",
+      "fecha": "2026-11-11",
+      "numero": "8287"
+    },
+    {
       "nombre": "CHONTICO DÍA",
       "fecha": "2026-11-11",
       "numero": "8972"
+    },
+    {
+      "nombre": "CHONTICO NOCHE",
+      "fecha": "2026-11-11",
+      "numero": "1821"
     }
   ],
   "notas": "Valores iniciales tomados de las páginas oficiales el 21 de octubre de 2026. El flujo automático debe validarlos antes de reemplazarlos.",
-  "errores": []
+  "errores": [
+    "SuperGIROS: HTTP Error 503: Service Unavailable"
+  ]
 }
