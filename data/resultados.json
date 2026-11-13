@@ -3,91 +3,64 @@
     "supergiros_sucre": "https://supergirossucre.com.co/",
     "chance_millonario": "https://www.chancemillonario.com/index.php"
   },
-  "actualizado_en": "2026-11-12T13:56:00-05:00",
-  "estado": "actualizado-parcial",
+  "actualizado_en": "2026-11-13T13:30:47-05:00",
+  "estado": "actualizado",
   "acumulados": [
     {
       "cifras": 3,
       "apuesta": "$5.000",
-      "valor": 79789959
+      "valor": 81839223
     },
     {
       "cifras": 3,
       "apuesta": "$2.000",
-      "valor": 21869256
+      "valor": 24128404
     },
     {
       "cifras": 3,
       "apuesta": "$3.000",
-      "valor": 40999688
+      "valor": 45101913
     },
     {
       "cifras": 3,
       "apuesta": "$1.000",
-      "valor": 7000000
+      "valor": 14458724
     },
     {
       "cifras": 4,
       "apuesta": "$5.000",
-      "valor": 929055785
+      "valor": 929910771
     },
     {
       "cifras": 4,
       "apuesta": "$2.000",
-      "valor": 331752350
+      "valor": 332648279
     },
     {
       "cifras": 4,
       "apuesta": "$3.000",
-      "valor": 566640682
+      "valor": 568320719
     },
     {
       "cifras": 4,
       "apuesta": "$1.000",
-      "valor": 702278398
+      "valor": 709526060
     }
   ],
-  "gran_acumulado_3": 149658903,
-  "gran_acumulado_4": 2529727215,
+  "gran_acumulado_3": 165528264,
+  "gran_acumulado_4": 2540405829,
   "principal": {
     "apuesta": "$6.000",
-    "valor": 1866892657,
-    "fecha": "12-11-2026"
+    "valor": 1914416893,
+    "fecha": "13-11-2026"
   },
   "resultados": [
     {
       "nombre": "ANTIOQUEÑITA DÍA",
-      "fecha": "2026-11-11",
-      "numero": "2337"
-    },
-    {
-      "nombre": "ANTIOQUEÑITA TARDE",
-      "fecha": "2026-11-11",
-      "numero": "0790"
-    },
-    {
-      "nombre": "CAFETERITO NOCHE",
-      "fecha": "2026-11-11",
-      "numero": "1847"
-    },
-    {
-      "nombre": "CAFETERITO TARDE",
-      "fecha": "2026-11-11",
-      "numero": "8287"
-    },
-    {
-      "nombre": "CHONTICO DÍA",
-      "fecha": "2026-11-11",
-      "numero": "8972"
-    },
-    {
-      "nombre": "CHONTICO NOCHE",
-      "fecha": "2026-11-11",
-      "numero": "1821"
+      "fecha": "2026-11-13",
+      "numero": "4421"
     }
   ],
   "notas": "Valores iniciales tomados de las páginas oficiales el 21 de octubre de 2026. El flujo automático debe validarlos antes de reemplazarlos.",
-  "errores": [
-    "SuperGIROS: HTTP Error 503: Service Unavailable"
-  ]
+  "errores": []
 }
