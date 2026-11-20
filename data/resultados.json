@@ -3,71 +3,69 @@
     "supergiros_sucre": "https://supergirossucre.com.co/",
     "chance_millonario": "https://www.chancemillonario.com/index.php"
   },
-  "actualizado_en": "2026-11-19T14:28:53-05:00",
-  "estado": "actualizado-parcial",
+  "actualizado_en": "2026-11-20T14:05:58-05:00",
+  "estado": "actualizado",
   "acumulados": [
     {
       "cifras": 3,
       "apuesta": "$5.000",
-      "valor": 87828168
+      "valor": 88922285
     },
     {
       "cifras": 3,
       "apuesta": "$2.000",
-      "valor": 30408922
+      "valor": 31613157
     },
     {
       "cifras": 3,
       "apuesta": "$3.000",
-      "valor": 29009201
+      "valor": 30842021
     },
     {
       "cifras": 3,
       "apuesta": "$1.000",
-      "valor": 10794323
+      "valor": 14539616
     },
     {
       "cifras": 4,
       "apuesta": "$5.000",
-      "valor": 932234218
+      "valor": 932652075
     },
     {
       "cifras": 4,
       "apuesta": "$2.000",
-      "valor": 335107723
+      "valor": 335575614
     },
     {
       "cifras": 4,
       "apuesta": "$3.000",
-      "valor": 572678968
+      "valor": 573449462
     },
     {
       "cifras": 4,
       "apuesta": "$1.000",
-      "valor": 729002782
+      "valor": 732649577
     }
   ],
-  "gran_acumulado_3": 158040614,
-  "gran_acumulado_4": 2569023691,
+  "gran_acumulado_3": 165917079,
+  "gran_acumulado_4": 2574326728,
   "principal": {
     "apuesta": "$6.000",
-    "valor": 2136414775,
-    "fecha": "18-11-2026"
+    "valor": 2237485128,
+    "fecha": "20-11-2026"
   },
   "resultados": [
     {
       "nombre": "ANTIOQUEÑITA DÍA",
-      "fecha": "2026-11-18",
-      "numero": "7499"
+      "fecha": "2026-11-20",
+      "numero": "2209"
     },
     {
       "nombre": "CHONTICO DÍA",
-      "fecha": "2026-11-18",
-      "numero": "0639"
+      "fecha": "2026-11-20",
+      "numero": "4475"
     }
   ],
   "notas": "Valores iniciales tomados de las páginas oficiales el 21 de octubre de 2026. El flujo automático debe validarlos antes de reemplazarlos.",
-  "errores": [
-    "Chance Millonario: No se encontró acumulado acompañado por fecha."
-  ]
+  "errores": []
 }
