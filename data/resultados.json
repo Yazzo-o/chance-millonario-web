@@ -3,72 +3,67 @@
     "supergiros_sucre": "https://supergirossucre.com.co/",
     "chance_millonario": "https://www.chancemillonario.com/index.php"
   },
-  "actualizado_en": "2026-11-23T17:38:49-05:00",
+  "actualizado_en": "2026-11-24T16:11:08-05:00",
   "estado": "actualizado",
   "acumulados": [
     {
       "cifras": 3,
       "apuesta": "$5.000",
-      "valor": 91930046
+      "valor": 92991222
     },
     {
       "cifras": 3,
       "apuesta": "$2.000",
-      "valor": 34948452
+      "valor": 36024688
     },
     {
       "cifras": 3,
       "apuesta": "$3.000",
-      "valor": 35903684
+      "valor": 37636761
     },
     {
       "cifras": 3,
       "apuesta": "$1.000",
-      "valor": 9215080
+      "valor": 7000000
     },
     {
       "cifras": 4,
       "apuesta": "$5.000",
-      "valor": 933844028
+      "valor": 934302903
     },
     {
       "cifras": 4,
       "apuesta": "$2.000",
-      "valor": 336918958
+      "valor": 337318175
     },
     {
       "cifras": 4,
       "apuesta": "$3.000",
-      "valor": 575575347
+      "valor": 576293960
     },
     {
       "cifras": 4,
       "apuesta": "$1.000",
-      "valor": 742626369
+      "valor": 745954299
     }
   ],
-  "gran_acumulado_3": 171997262,
-  "gran_acumulado_4": 2588964702,
+  "gran_acumulado_3": 173652671,
+  "gran_acumulado_4": 2593869337,
   "principal": {
     "apuesta": "$6.000",
-    "valor": 2363103245,
-    "fecha": "22-11-2026"
+    "valor": 2426953128,
+    "fecha": "24-11-2026"
   },
   "resultados": [
     {
       "nombre": "ANTIOQUEÑITA DÍA",
-      "fecha": "2026-11-23",
-      "numero": "2372"
-    },
-    {
-      "nombre": "ANTIOQUEÑITA TARDE",
-      "fecha": "2026-11-23",
-      "numero": "1808"
+      "fecha": "2026-11-24",
+      "numero": "9801"
     },
     {
       "nombre": "CHONTICO DÍA",
-      "fecha": "2026-11-23",
-      "numero": "5687"
+      "fecha": "2026-11-24",
+      "numero": "0097"
     }
   ],
   "notas": "Valores iniciales tomados de las páginas oficiales el 21 de octubre de 2026. El flujo automático debe validarlos antes de reemplazarlos.",
