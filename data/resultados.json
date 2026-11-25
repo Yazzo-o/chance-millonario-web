@@ -3,67 +3,67 @@
     "supergiros_sucre": "https://supergirossucre.com.co/",
     "chance_millonario": "https://www.chancemillonario.com/index.php"
   },
-  "actualizado_en": "2026-11-24T16:11:08-05:00",
+  "actualizado_en": "2026-11-25T15:28:20-05:00",
   "estado": "actualizado",
   "acumulados": [
     {
       "cifras": 3,
       "apuesta": "$5.000",
-      "valor": 92991222
+      "valor": 94095928
     },
     {
       "cifras": 3,
       "apuesta": "$2.000",
-      "valor": 36024688
+      "valor": 37214189
     },
     {
       "cifras": 3,
       "apuesta": "$3.000",
-      "valor": 37636761
+      "valor": 39484961
     },
     {
       "cifras": 3,
       "apuesta": "$1.000",
-      "valor": 7000000
+      "valor": 10588822
     },
     {
       "cifras": 4,
       "apuesta": "$5.000",
-      "valor": 934302903
+      "valor": 934839017
     },
     {
       "cifras": 4,
       "apuesta": "$2.000",
-      "valor": 337318175
+      "valor": 337746187
     },
     {
       "cifras": 4,
       "apuesta": "$3.000",
-      "valor": 576293960
+      "valor": 577054849
     },
     {
       "cifras": 4,
       "apuesta": "$1.000",
-      "valor": 745954299
+      "valor": 749440250
     }
   ],
-  "gran_acumulado_3": 173652671,
-  "gran_acumulado_4": 2593869337,
+  "gran_acumulado_3": 181383900,
+  "gran_acumulado_4": 2599080303,
   "principal": {
     "apuesta": "$6.000",
-    "valor": 2426953128,
-    "fecha": "24-11-2026"
+    "valor": 2474285364,
+    "fecha": "25-11-2026"
   },
   "resultados": [
     {
       "nombre": "ANTIOQUEÑITA DÍA",
-      "fecha": "2026-11-24",
-      "numero": "9801"
+      "fecha": "2026-11-25",
+      "numero": "2228"
     },
     {
       "nombre": "CHONTICO DÍA",
-      "fecha": "2026-11-24",
-      "numero": "0097"
+      "fecha": "2026-11-25",
+      "numero": "9621"
     }
   ],
   "notas": "Valores iniciales tomados de las páginas oficiales el 21 de octubre de 2026. El flujo automático debe validarlos antes de reemplazarlos.",
