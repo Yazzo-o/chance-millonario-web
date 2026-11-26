@@ -3,52 +3,52 @@
     "supergiros_sucre": "https://supergirossucre.com.co/",
     "chance_millonario": "https://www.chancemillonario.com/index.php"
   },
-  "actualizado_en": "2026-11-25T15:28:20-05:00",
-  "estado": "actualizado",
+  "actualizado_en": "2026-11-26T15:10:28-05:00",
+  "estado": "actualizado-parcial",
   "acumulados": [
     {
       "cifras": 3,
       "apuesta": "$5.000",
-      "valor": 94095928
+      "valor": 95264751
     },
     {
       "cifras": 3,
       "apuesta": "$2.000",
-      "valor": 37214189
+      "valor": 38408909
     },
     {
       "cifras": 3,
       "apuesta": "$3.000",
-      "valor": 39484961
+      "valor": 41427262
     },
     {
       "cifras": 3,
       "apuesta": "$1.000",
-      "valor": 10588822
+      "valor": 14267176
     },
     {
       "cifras": 4,
       "apuesta": "$5.000",
-      "valor": 934839017
+      "valor": 935408995
     },
     {
       "cifras": 4,
       "apuesta": "$2.000",
-      "valor": 337746187
+      "valor": 338165901
     },
     {
       "cifras": 4,
       "apuesta": "$3.000",
-      "valor": 577054849
+      "valor": 577831959
     },
     {
       "cifras": 4,
       "apuesta": "$1.000",
-      "valor": 749440250
+      "valor": 752981921
     }
   ],
-  "gran_acumulado_3": 181383900,
-  "gran_acumulado_4": 2599080303,
+  "gran_acumulado_3": 189368098,
+  "gran_acumulado_4": 2604388776,
   "principal": {
     "apuesta": "$6.000",
     "valor": 2474285364,
@@ -67,5 +67,7 @@
     }
   ],
   "notas": "Valores iniciales tomados de las páginas oficiales el 21 de octubre de 2026. El flujo automático debe validarlos antes de reemplazarlos.",
-  "errores": []
+  "errores": [
+    "Chance Millonario: No se encontró acumulado acompañado por fecha."
+  ]
 }
